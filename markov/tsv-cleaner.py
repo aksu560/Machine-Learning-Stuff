@@ -4,7 +4,7 @@ import csv
 
 output = []
 with open(sys.argv[1], 'r', errors='ignore') as f:
-    reader = csv.reader(f)
+    reader = csv.reader(f, delimiter='\t')
     next(reader) # Ignore first row
 
     for row in reader:
